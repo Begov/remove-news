@@ -1,0 +1,21 @@
+{
+	"manifest_version": 2,
+	"name": "remove news",
+	"description": "Автоматическое удаление постов в инстаграмм",
+	"version": "0.0.1",
+	"author": "Бегов Эмран",
+	"browser_action": {
+		"default_title": "Автоматическое удаление постов в инстаграмм",
+		"default_icon": "icon.png",
+		"default_popup": "index.html"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"<all_urls>"
+			],
+			"js": ["main.js"]
+		}
+  ],
+  "permissions": ["activeTab"]
+}
